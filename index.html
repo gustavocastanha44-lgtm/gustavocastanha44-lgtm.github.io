@@ -3,131 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gustavo Santos | Data Analyst</title>
+<title>Portfólio - Gustavo</title>
 
 <style>
-html{scroll-behavior:smooth;}
+    body{
+        margin:0;
+        font-family: Arial, Helvetica, sans-serif;
+        background:#0f172a;
+        color:white;
+        scroll-behavior:smooth;
+    }
 
-body{
-margin:0;
-font-family:Arial, Helvetica, sans-serif;
-background:#020617;
-color:#e6f1ff;
-}
+    /* MENU */
+    nav{
+        position:fixed;
+        top:0;
+        width:100%;
+        background:#020617;
+        padding:15px;
+        text-align:center;
+        z-index:1000;
+    }
 
-/* MENU */
-nav{
-position:fixed;
-top:0;
-width:100%;
-background:#020617;
-padding:18px 60px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-border-bottom:1px solid #0ea5e9;
-z-index:999;
-}
+    nav a{
+        color:#38bdf8;
+        margin:0 20px;
+        text-decoration:none;
+        font-weight:bold;
+        font-size:18px;
+    }
 
-nav h3{
-color:#38bdf8;
-font-size:22px;
-}
+    nav a:hover{
+        color:white;
+    }
 
-nav a{
-color:#cbd5f5;
-text-decoration:none;
-margin-left:30px;
-font-weight:bold;
-transition:0.3s;
-}
+    /* SEÇÕES */
+    section{
+        height:100vh;
+        padding:120px 40px;
+    }
 
-nav a:hover{
-color:#38bdf8;
-}
+    /* TELA INICIAL */
+    #home{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        text-align:center;
+        background:linear-gradient(180deg,#020617,#0f172a);
+    }
 
-/* HERO */
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-text-align:center;
-background:linear-gradient(180deg,#020617,#020617,#020617,#03132b);
-}
+    h1{
+        font-size:48px;
+        margin-bottom:10px;
+    }
 
-.hero h1{
-font-size:60px;
-color:#38bdf8;
-}
+    .sub{
+        font-size:20px;
+        color:#38bdf8;
+    }
 
-.hero span{
-color:#0ea5e9;
-}
+    /* BOTÃO */
+    .btn{
+        margin-top:30px;
+        padding:15px 30px;
+        background:#2563eb;
+        border:none;
+        border-radius:10px;
+        color:white;
+        font-size:18px;
+        cursor:pointer;
+    }
 
-.hero p{
-font-size:22px;
-margin-top:15px;
-color:#93c5fd;
-}
+    .btn:hover{
+        background:#1d4ed8;
+    }
 
-.btn{
-margin-top:35px;
-padding:16px 35px;
-background:linear-gradient(90deg,#0ea5e9,#38bdf8);
-border:none;
-border-radius:10px;
-font-weight:bold;
-cursor:pointer;
-text-decoration:none;
-color:black;
-font-size:16px;
-transition:0.3s;
-}
+    /* PROJETOS */
+    #projetos{
+        background:#020617;
+    }
 
-.btn:hover{
-transform:scale(1.05);
-}
+    .cards{
+        display:flex;
+        gap:30px;
+        flex-wrap:wrap;
+        justify-content:center;
+        margin-top:40px;
+    }
 
-/* SEÇÕES */
-.section{
-padding:110px 12%;
-}
+    .card{
+        background:#0f172a;
+        padding:25px;
+        border-radius:15px;
+        width:280px;
+        text-align:center;
+        box-shadow:0 0 15px rgba(56,189,248,0.2);
+        transition:0.3s;
+    }
 
-.section h2{
-color:#38bdf8;
-font-size:34px;
-margin-bottom:30px;
-}
+    .card:hover{
+        transform:scale(1.05);
+        box-shadow:0 0 25px rgba(56,189,248,0.5);
+    }
 
-/* CARDS */
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:25px;
-}
+    .card a{
+        display:inline-block;
+        margin-top:15px;
+        padding:10px 20px;
+        background:#38bdf8;
+        color:black;
+        text-decoration:none;
+        border-radius:8px;
+        font-weight:bold;
+    }
 
-.card{
-background:linear-gradient(145deg,#020617,#031b34);
-padding:28px;
-border-radius:14px;
-border:1px solid #0ea5e9;
-transition:0.3s;
-}
+    /* SOBRE */
+    #sobre{
+        text-align:center;
+        max-width:800px;
+        margin:auto;
+    }
 
-.card:hover{
-transform:translateY(-8px) scale(1.02);
-box-shadow:0 0 25px #0ea5e955;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:40px;
-border-top:1px solid #0ea5e9;
-color:#93c5fd;
-}
 </style>
 </head>
 
@@ -135,92 +132,60 @@ color:#93c5fd;
 
 <!-- MENU -->
 <nav>
-<h3>Gustavo.dev</h3>
-<div>
-<a href="#sobre">Sobre</a>
-<a href="#skills">Skills</a>
-<a href="#projetos">Projetos</a>
-<a href="#contato">Contato</a>
-</div>
+    <a href="#home">Início</a>
+    <a href="#projetos">Projetos</a>
+    <a href="#sobre">Sobre</a>
 </nav>
 
-<!-- HERO -->
-<section class="hero">
-<h1>Gustavo <span>Santos</span></h1>
-<p>Data Analyst | Power BI | Python | Excel</p>
-<a href="#projetos" class="btn">Ver Projetos ↓</a>
-</section>
-
-<!-- SOBRE -->
-<section id="sobre" class="section">
-<h2>👨‍💻 Sobre mim</h2>
-<p>
-Profissional com experiência em análise de dados industriais, dashboards gerenciais e automação de relatórios.
-Foco em geração de insights, indicadores estratégicos e suporte à tomada de decisão baseada em dados.
-</p>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="section">
-<h2>🛠 Skills</h2>
-<div class="cards">
-<div class="card">📊 Power BI & Dashboards</div>
-<div class="card">📈 Excel avançado & KPIs</div>
-<div class="card">🐍 Python para análise</div>
-<div class="card">🧠 Análise de dados</div>
-<div class="card">⚙ Automação de relatórios</div>
-<div class="card">🗄 Tratamento de dados</div>
-</div>
+<!-- HOME -->
+<section id="home">
+    <h1>Gustavo Santos</h1>
+    <p class="sub">Migração para TI | Dados | Python | Power BI</p>
+    <button class="btn" onclick="scrollProjetos()">Ver Projetos</button>
 </section>
 
 <!-- PROJETOS -->
-<section id="projetos" class="section">
-<h2>📊 Projetos</h2>
+<section id="projetos">
+    <h1 style="text-align:center;">Meus Projetos</h1>
 
-<div class="cards">
+    <div class="cards">
 
-<div class="card">
-<b>Dashboard de Indicadores</b><br><br>
-Dashboards interativos para análise operacional e custos.<br><br>
-<a href="LINK-AQUI" target="_blank">🔗 Ver projeto</a>
-</div>
+        <div class="card">
+            <h3>Dashboard Resíduos</h3>
+            <p>Power BI focado em indicadores ambientais.</p>
+            <a href="#">Ver projeto</a>
+        </div>
 
-<div class="card">
-<b>Análise de Dados Industriais</b><br><br>
-Estudo de produção, consumo e geração de resíduos.<br><br>
-<a href="LINK-AQUI" target="_blank">🔗 Ver projeto</a>
-</div>
+        <div class="card">
+            <h3>Análise Python</h3>
+            <p>Automação e análise de dados industriais.</p>
+            <a href="#">Ver projeto</a>
+        </div>
 
-<div class="card">
-<b>Automação em Python</b><br><br>
-Scripts para tratamento de dados e relatórios automáticos.<br><br>
-<a href="LINK-AQUI" target="_blank">🔗 Ver projeto</a>
-</div>
+        <div class="card">
+            <h3>Excel Inteligente</h3>
+            <p>Planilhas automáticas e dashboards.</p>
+            <a href="#">Ver projeto</a>
+        </div>
 
-<div class="card">
-<b>Dashboards Power BI</b><br><br>
-Visualizações e indicadores estratégicos.<br><br>
-<a href="LINK-AQUI" target="_blank">🔗 Ver projeto</a>
-</div>
-
-</div>
+    </div>
 </section>
 
-<!-- CONTATO -->
-<section id="contato" class="section">
-<h2>📬 Contato</h2>
-<p>Email: seuemail@email.com</p>
-<p>LinkedIn: cole depois</p>
-<p>GitHub: seu github</p>
+<!-- SOBRE -->
+<section id="sobre">
+    <h1>Sobre mim</h1>
+    <p>
+        Profissional da área ambiental migrando para TI e análise de dados.  
+        Experiência com indicadores, automações em Excel, Power BI e Python.  
+        Buscando oportunidade na área de tecnologia e dados.
+    </p>
 </section>
 
-<footer>
-Gustavo Santos • Portfólio Data Analyst
-</footer>
+<script>
+function scrollProjetos(){
+    document.getElementById("projetos").scrollIntoView();
+}
+</script>
 
 </body>
 </html>
-
-.cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, m
